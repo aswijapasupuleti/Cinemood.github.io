@@ -1,0 +1,66 @@
+<html> 
+<head> 
+   <script> 
+    function validate() 
+{ 
+if(document.myform.elements[0].value=="") 
+{ 
+alert("provide First name"); 
+document.myform.elements[0].focus(); 
+return false; 
+} 
+if(document.myform.elements[1].value=="") 
+{ 
+alert("Provide last name"); 
+document.myform.elements[1].foucs(); 
+return false; 
+} 
+if(document.myform.elements[2].value=="") 
+{ 
+alert("Provide e-mail address"); 
+document.myform.elements[2].focus(); 
+return false; 
+} 
+if(document.myform.elements[3].value=="") 
+{ 
+alert("Provide password"); 
+document.myform.elements[3].focus(); 
+return false; 
+} 
+if(document.myform.elements[0].value=="") 
+{ 
+alert("provide user name"); 
+document.myform.elements[0].focus(); 
+return false; 
+} 
+if(!document.getElementById('num').checked) 
+{ 
+alert("Enter Number"); 
+return false; 
+} 
+return true; 
+} 
+</script> 
+<style > 
+    body{ 
+        background-image: url(https://i.pinimg.com/1200x/ab/5f/db/ab5fdbc8da76c76427d8d96582e5371f.jpg); 
+        text-align: center; 
+    } 
+</style> 
+</head> 
+<body> 
+        <form name="myform"onsubmit="validate()" action="sample.html" method="post"> 
+            <pre> 
+                <u><h3 align="center">REGISTRATION FORM</h3></u> 
+                <b >First Name:      </b><input type="text" name="name"required><br><br> 
+                <b>Last Name:       </b><input type="text" name="name"required><br><br> 
+                <b>UserName:       </b><input type="text" name="name"required><br><br> 
+                <b>Email            </b><input type="email" name="name"required><br><br> 
+                <b>Password:        </b><input type="text" name="name" placeholder="password" required><br><br> 
+                <b>Phone number     </b><input type="text" name="number"required><br><br> 
+                <input type="submit" value="SUBMIT">        <input type="reset" value="RESET"> 
+            </pre> 
+        </form> 
+     </body> 
+</html> 
+ 

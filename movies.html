@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Movie </title> 
+    <style> 
+        /* Style for the dropdown menu */ 
+        body 
+        { 
+            background-image:url(https://as1.ftcdn.net/v2/jpg/05/51/72/96/1000_F_551729632_3BOu12oAsuApigUDdpadY2rVhDeZgkkV.jpg); 
+            text-align: center; 
+            color: black; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+            
+        } 
+         .scrollabledropdown { 
+            overflowy: auto; 
+            maxheight: 30px; /* Set the maximum height for the dropdown */ 
+        } 
+       h1 { 
+        color: black; 
+        text-shadow: 2px 2px 9px white; 
+       } 
+    </style> 
+</head> 
+<body> 
+    <h1>Explore movies!!!</h1> 
+ 
+    <label for="movie-type" align>Select a Movie Type:</label> 
+    <select id="movie-type"> 
+        <option value="">Select Type</option> 
+        <option value="action">Action</option> 
+        <option value="comedy">Comedy</option> 
+        <option value="Romantic">Romantic</option> 
+        <option value="thirller">thirller</option> 
+        <option value="Horror">Horror</option> 
+    </select> 
+    <script> 
+        document.getElementById("movie-type").addEventListener("change", function() { 
+            var selectedValue = this.value; 
+            if (selectedValue) { 
+                window.location.href = getMovieLink(selectedValue); 
+            } 
+        }); 
+        function getMovieLink(type) { 
+            var movieLinks = { 
+                "action": "action.html", 
+                "comedy": "comedy.html", 
+                "Romantic": "romantic.html", 
+                "thirller": "thriller.html", 
+                "Horror": "Horror.html" 
+            }; 
+            return movieLinks[type]; 
+        } 
+    </script> 
+</body> 
+</html> 
